@@ -11,7 +11,7 @@ const Home = () => {
                 <Text fontSize={'30px'} mx={'auto'} fontWeight={700}>PELOTAS, RS</Text>
                 <Image mt={'50px'} src={hamburguerHomeImage} />
             </Flex>
-            <Flex align={'center'} direction={'column'} minH={'650px'} pt={'100px'} px={'20px'} gap={'20px'} border={'1px solid white'}>
+            <Flex align={'center'} direction={'column'} minH={'650px'} pt={'100px'} px={'20px'} gap={'20px'} >
                 <Text color={'red'} fontFamily={'Oleo Script'} fontSize={'25px'}>Bem-vindo ao</Text>
                 <Text fontSize={'40px'} w={'280px'} align={'center'} fontWeight={700} fontFamily={'sans-serif'}>THE BURGER CAFE</Text>
                 <Text fontFamily={'sans-serif'} align={'center'} fontWeight={700} w={'250px'}>HAMBUGUERIA CASEIRA BURGERS DESDE 2010</Text>
@@ -20,7 +20,7 @@ const Home = () => {
                     Class aptent taciti sociosqu a litora torquent per conubia nostra, per inceptos
                     himenaeos. Cras vitae augue in lorem malesuada sed hendrerit. </Text>
             </Flex>
-            <HamburgerBox />
+            <HamburgerBox title={'DELUXE BURGER'} />
             <Footer />
         </Fragment>
     )

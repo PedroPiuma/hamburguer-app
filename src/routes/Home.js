@@ -20,7 +20,7 @@ const Home = () => {
                     Class aptent taciti sociosqu a litora torquent per conubia nostra, per inceptos
                     himenaeos. Cras vitae augue in lorem malesuada sed hendrerit. </Text>
             </Flex>
-            <HamburgerBox title={'DELUXE BURGER'} />
+            <HamburgerBox title={'DELUXE BURGER'} price={'25,00'} />
             <Footer />
         </Fragment>
     )

@@ -12,7 +12,7 @@ const Layout = () => {
     const btnRef = useRef()
     return (
         <Fragment>
-            <Flex position='fixed' top={0} w={['100%']} align='center' justify={'space-between'} px={'15px'} py={'20px'} bgColor='#000000'>
+            <Flex display={['flex', 'none']} position='fixed' top={0} w={['100%']} align='center' justify={'space-between'} px={'15px'} py={'20px'} bgColor='#000000'>
                 <Flex align={'center'} gap={'15px'}><Icon as={GiHamburger} w={'35px'} h={'35px'} /><Text>The Burger </Text></Flex>
                 <Icon as={GiHamburgerMenu} w={'35px'} h={'35px'} onClick={onOpen} cursor={'pointer'} />
                 <Drawer isOpen={isOpen} placement='right' onClose={onClose} finalFocusRef={btnRef}>
@@ -21,13 +21,22 @@ const Layout = () => {
                         <DrawerCloseButton />
                         <DrawerBody display={'flex'} flexDirection={'column'} gap={'25px'} pt={'70px'}>
                             <Link to={'/'} onClick={onClose}><Flex gap={'5px'}><Icon as={GiHamburger} w={'35px'} h={'35px'} /><Text fontFamily={'sans-serif'} fontWeight={700} fontSize={'25px'}>HOME</Text></Flex></Link>
-                            <Flex gap={'5px'}><Icon as={BiFoodMenu} w={'35px'} h={'35px'} /><Text fontFamily={'sans-serif'} fontWeight={700} fontSize={'25px'}>MENU</Text></Flex>
+                            <Flex gap={'5px'}><Icon as={BiFoodMenu} w={'35px'} h={'35px'} /><Text fontFamily={'sans-serif'} fontWeight={700} fontSize={'25px'}>CARDÁPIO</Text></Flex>
                             <Link to={'/aboutus'} onClick={onClose}><Flex gap={'5px'}><Icon as={HiUserGroup} w={'35px'} h={'35px'} /><Text fontFamily={'sans-serif'} fontWeight={700} fontSize={'25px'}>SOBRE NÓS</Text></Flex></Link>
                             <Flex gap={'5px'}><Icon as={HiOutlineLocationMarker} w={'35px'} h={'35px'} /><Text fontFamily={'sans-serif'} fontWeight={700} fontSize={'25px'}>LOCALIZAÇÃO</Text></Flex>
                         </DrawerBody>
                     </DrawerContent>
                 </Drawer>
             </Flex>
+
+            <Flex display={['none', 'flex']} position='fixed' top={0} w={['100%']} align='center' justify={'space-between'} px={'50px'} py={'20px'} bgColor='#000000'>
+                <Flex align={'center'} gap={'15px'}><Icon as={GiHamburger} w={'35px'} h={'35px'} /><Text>The Burger </Text></Flex>
+                <Link to={'/'} ><Text fontFamily={'sans-serif'} fontWeight={700} fontSize={'25px'} border={'4px solid transparent'} _hover={{ borderBottom: '4px solid red' }}>HOME</Text></Link>
+                <Link to={'#'} ><Text fontFamily={'sans-serif'} fontWeight={700} fontSize={'25px'} border={'4px solid transparent'} _hover={{ borderBottom: '4px solid red' }}>CARDÁPIO</Text></Link>
+                <Link to={'/aboutus'} ><Text fontFamily={'sans-serif'} fontWeight={700} fontSize={'25px'} border={'4px solid transparent'} _hover={{ borderBottom: '4px solid red' }}>SOBRE NÓS</Text></Link>
+                <Link to={'#'} ><Text fontFamily={'sans-serif'} fontWeight={700} fontSize={'25px'} border={'4px solid transparent'} _hover={{ borderBottom: '4px solid red' }}>LOCALIZAÇÃO</Text></Link>
+            </Flex>
+
             <Outlet />
         </Fragment>
     )
